@@ -1,17 +1,37 @@
 package com.IkerMorera.tema4maven;
+import com.github.lalyos.jfiglet.FigletFont;
+import com.github.lalyos.jfiglet.JFiglet;
+import com.googlecode.lanterna.screen.Screen;
+import com.googlecode.lanterna.terminal.DefaultTerminalFactory;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    static void main() {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        IO.println(String.format("Hello and welcome!"));
+    public static void main(String[] args) throws IOException {
+        String texto = "Iker Morera";
+        String banner = FigletFont.convertOneLine(texto);
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            IO.println("i = " + i);
+        List<String> lineas = new ArrayList<>();
+
+        for (String linea : banner.split("\\n")) {
+            lineas.add(linea);
         }
+
+        lineas.add("");
+        lineas.add("");
+        lineas.add("Curriculum Vitae");
+        lineas.add("Nombre: iker Morera Larbi");
+        lineas.add("Edad: 22 años");
+        lineas.add("estudiante de desarrollo web");
+        lineas.add("lenguajes: java, javascript, html, css,");
+        lineas.add("Bases de datos: mySQL");
+        lineas.add("Control de versiones: git, github");
+        lineas.add("intereses: programación, informatica y videojuegos");
+        lineas.add("objetivo: convertirme en desarrollador web de frontend");
+        lineas.add("aptitudes: buen trabajo en equipo, proactivo y paciencia");
+        lineas.add("disponibilidad completa y coche propio");
+
     }
 }
+
