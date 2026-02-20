@@ -14,6 +14,7 @@ public class Main {
 
         List<String> lineas = new ArrayList<>();
 
+
         for (String linea : banner.split("\\n")) {
             lineas.add(linea);
         }
@@ -32,6 +33,9 @@ public class Main {
         lineas.add("aptitudes: buen trabajo en equipo, proactivo y paciencia");
         lineas.add("disponibilidad completa y coche propio");
 
+        Screen screen = new DefaultTerminalFactory().createScreen();
+        screen.startScreen();
+        screen.setCursorPosition(null);
     }
 }
 
